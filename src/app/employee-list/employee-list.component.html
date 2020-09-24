@@ -1,0 +1,22 @@
+<p>employee-list works!</p>
+<table>
+        <tr>
+                <th>ID</th>
+                <th>Name</th> 
+                <th>Location</th>
+                <th>Email</th> 
+                <th>Mobile</th>
+                <th>Edit</th>
+                <th>Delete</th>
+        </tr>
+         <tr *ngFor="let employee of employees">
+                <td><a >{{employee.id}}</a></td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.location}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.mobile}}</td>
+               <td> <input type="button" value="Edit"></td>
+               <td> <input type="button" Value="Delete"></td>
+         </tr>
+</table>
+

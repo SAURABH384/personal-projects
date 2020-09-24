@@ -1,0 +1,23 @@
+<app-test></app-test>
+<p>addemployee works!</p>
+
+{{empModel| json}}
+<hr/>
+<div id="form">
+<form (ngSubmit)="onSubmit()" #userform="ngForm">
+    
+   
+    <table>
+            <tr><td><label>Employee Name :</label></td>
+                <td><input type="text"  ngModel name="name" required></td></tr>
+            <tr> <td><label>Location :</label></td>
+                <td> <input type="text"  ngModel name="location" required></td></tr>
+            <tr><td><label>Email :</label></td>
+                <td> <input type="email"  ngModel name="email" required></td></tr>
+            <tr> <td><label>Mobile:</label></td>
+            <td> <input type="number"  ngModel name="mobile" required></td></tr>
+    <tr><td></td>
+    <td><button name="button" [disabled]="!userform.valid">Submit</button></td></tr>
+  </table>
+</form>
+</div>

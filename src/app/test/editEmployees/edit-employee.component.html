@@ -1,0 +1,20 @@
+<app-test></app-test>
+<p>Edit employee works!</p>
+
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+   {{userForm.value|json}}
+    <table>
+            <tr><td><label>Employee Name :</label></td>
+                <td><input type="text" name="name" [ngModel]></td></tr>
+            <tr> <td><label>Location :</label></td>
+                <td> <input type="text" name="location" [ngModel]></td></tr>
+            <tr><td><label>Email :</label></td>
+                <td> <input type="email" name="email" [ngModel]></td></tr>
+            <tr> <td><label>Mobile:</label></td>
+            <td> <input type="number" name = "mobile" [ngModel] ></td></tr>
+    <tr><td></td>
+    <td><button type="button">Update</button></td></tr>
+  </table>
+</form>
+

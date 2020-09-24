@@ -1,0 +1,26 @@
+<app-test></app-test>
+<p>employees works!</p>
+<table >
+        <tr>
+                <th>ID</th>
+                <th>Name</th> 
+                <th>Location</th>
+                <th>Email</th> 
+                <th>Mobile</th>
+                <th>Edit</th>
+                <th>Delete</th>
+        </tr>
+         <tr *ngFor="let employee of Employees">
+               <a [routerLink]="['/details/employee.id']"><td>{{employee.id}}</td></a>
+                <td>{{employee.name}}</td>
+                <td>{{employee.location}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.mobile}}</td>
+                <td> <button (click)="onSelect(employee)">Edit</button></td>
+                <td> <button (click)="onSelectDelete(employee)">Delete</button></td>
+         </tr>
+</table>
+
+<router-outlet></router-outlet>
+
+
